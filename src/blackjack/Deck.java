@@ -11,12 +11,13 @@ public class Deck {
 		for (Rank rank : Rank.values()) {
 			for (Suit suit : Suit.values()) {
 				if (counter == 1) {
-					deck.add(new Card(rank, suit));
-				} else if (counter < 10) {
-
-					deck.add(new Card(rank, suit));
-				} else {
-					deck.add(new Card(rank, suit));
+					deck.add(new Card(rank, suit, 11));
+				} 
+				else if (counter < 10) {
+					deck.add(new Card(rank, suit, counter));
+				} 
+				else {
+					deck.add(new Card(rank, suit, 10));
 
 				}
 			}

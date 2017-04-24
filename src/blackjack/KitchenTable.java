@@ -10,7 +10,7 @@ public class KitchenTable {
 
 	public void gameNight() {
 
-		System.out.println("It's Friday Night Game Night! pick your card game.");
+		System.out.println("It's Friday Night Game Night! pick your card game./n/n");
 		System.out.println("|************************************************|");
 		System.out.println("|**********        Card Games          **********|");
 		System.out.println("|************************************************|");
@@ -36,7 +36,7 @@ public class KitchenTable {
 				System.out.println("Function not valid at this time, Please Try Again!");
 
 			}
-
+			input.close();
 		}
 	}
 
@@ -45,8 +45,8 @@ public class KitchenTable {
 		System.out.println("|**********      Black Jack Menu       **********|");
 		System.out.println("|************************************************|");
 		System.out.println("|                                                |");
-		System.out.println("|    1. Play                                     |");
-		System.out.println("|	 2. Quit                                     |");
+		System.out.println("|                  1. Play                       |");
+		System.out.println("|                  2. Quit                       |");
 		System.out.println("|                                                |");
 		System.out.println("|************************************************|");
 		System.out.println("|************************************************|");
@@ -55,7 +55,15 @@ public class KitchenTable {
 		Scanner userChoice = new Scanner(System.in);
 		int interfaceChoice = userChoice.nextInt();
 
+		if (interfaceChoice == 1) {
+			GameDriver game = new GameDriver();
+			game.runGame();
+		} else if (interfaceChoice == 2) {
+			System.out.println("Quitting!");
+			System.exit(0);
 
+			userChoice.close();
+		}
 	}
 
 }
