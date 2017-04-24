@@ -15,7 +15,7 @@ public class Card {
 		return rank;
 	}
 
-	public void setFace(Rank rank) {
+	public void setRank(Rank rank) {
 		this.rank = rank;
 	}
 
